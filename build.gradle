@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example.lombok'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    compileOnly project(':lombok')
+//    annotationProcessor project(':lombok')
+
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+}
